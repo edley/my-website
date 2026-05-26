@@ -1,5 +1,5 @@
-const SUPABASE_URL = 'https://YOUR_PROJECT.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
+const SUPABASE_URL = 'https://pwcvdhuuyaspwlxljsib.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB3Y3ZkaHV1eWFzcHdseGxqc2liIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4ODM1MzgsImV4cCI6MjA5MzQ1OTUzOH0.juEuRm5tcvSUba9sS-DTCM6TbeO_Oex5fbe3EC8peDE';
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
