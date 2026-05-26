@@ -365,6 +365,34 @@ ul { list-style: none; }
 
 .hero-meta i { margin-right: 8px; color: var(--secondary-light); }
 
+.hero-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.hero-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.25);
+    color: var(--white);
+    font-size: 1.15rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.hero-social a:hover {
+    background: var(--white);
+    color: var(--primary);
+    border-color: var(--white);
+    transform: translateY(-3px);
+}
+
 /* About */
 .about-grid {
     display: grid;
@@ -902,6 +930,32 @@ ul { list-style: none; }
 }
 
 .footer-links a:hover { color: var(--secondary-light); }
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
 
 .footer-copyright p {
     font-size: 0.8rem;
