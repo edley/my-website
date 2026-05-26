@@ -4,7 +4,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 async function submitContactForm(formData) {
-    const { data, error } = await supabaseClient
+    const { error } = await supabaseClient
         .from('contacts')
         .insert([
             {
@@ -15,9 +15,7 @@ async function submitContactForm(formData) {
                 message: formData.message,
                 created_at: new Date().toISOString()
             }
-        ])
-        .select();
+        ]);
 
     if (error) throw error;
-    return data;
 }

@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contactForm.reset();
         } catch (err) {
             console.error('Form submission error:', err);
-            showFormStatus('Something went wrong. Please try again later or email me directly at edley.mathias@infosys.com', 'error');
+            showFormStatus('Something went wrong. Please try again later or email me directly at edleymathias@tolmai.uk', 'error');
         } finally {
             setLoading(false);
         }
