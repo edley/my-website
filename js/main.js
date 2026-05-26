@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    const closeNavBtn = document.getElementById('closeNavBtn');
+    const slideNav = document.getElementById('slideNav');
+    const navOverlay = document.getElementById('navOverlay');
     const navLinks = document.querySelectorAll('.nav-link');
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
@@ -9,38 +11,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitText = document.getElementById('submitText');
     const submitSpinner = document.getElementById('submitSpinner');
 
-    // Navbar scroll effect
-    let lastScroll = 0;
-    window.addEventListener('scroll', function () {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        lastScroll = currentScroll;
-    });
+    function openNav() {
+        slideNav.classList.remove('-translate-x-full');
+        navOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        navOverlay.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden';
+    }
 
-    // Mobile nav toggle
-    navToggle.addEventListener('click', function () {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    function closeNav() {
+        slideNav.classList.add('-translate-x-full');
+        navOverlay.classList.add('opacity-0', 'pointer-events-none');
+        navOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = '';
+    }
 
-    // Close mobile nav on link click
+    menuToggle.addEventListener('click', openNav);
+    closeNavBtn.addEventListener('click', closeNav);
+    navOverlay.addEventListener('click', closeNav);
+
     navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+        link.addEventListener('click', closeNav);
     });
 
-    // Close mobile nav on outside click
-    document.addEventListener('click', function (e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                const offset = navbar.offsetHeight + 10;
+                const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            }
+        });
     });
 
     // Contact form submission
@@ -55,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
             message: document.getElementById('message').value.trim()
         };
 
-        // Client-side validation
         if (!formData.name || !formData.email || !formData.subject || !formData.message) {
             showFormStatus('Please fill in all required fields.', 'error');
             return;
@@ -66,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Check if Supabase is configured
         if (SUPABASE_URL.includes('YOUR_PROJECT')) {
             showFormStatus(
                 'Supabase is not configured yet. Please set your Supabase credentials in <strong>js/supabase.js</strong> and create a <code>contacts</code> table. See the setup instructions below.',
@@ -97,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showFormStatus(message, type) {
-        formStatus.className = 'form-status ' + type;
+        formStatus.className = 'font-body-md text-sm ' + (type === 'error' ? 'text-red-400' : type === 'success' ? 'text-site-teal' : type === 'info' ? 'text-walnut-warmth' : '');
         formStatus.innerHTML = message;
         formStatus.style.display = message ? 'block' : 'none';
     }
@@ -106,18 +108,21 @@ document.addEventListener('DOMContentLoaded', function () {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // Smooth scroll offset for fixed navbar
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                const offset = navbar.offsetHeight + 10;
-                const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({ top: targetPos, behavior: 'smooth' });
+    // Scroll reveal with IntersectionObserver
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
             }
         });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        if (!el.closest('#contact')) {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        }
     });
 });

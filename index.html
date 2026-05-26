@@ -1,542 +1,490 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Edley Mathias - Senior Technology Architect. 25+ years in Telecommunications, OSS/BSS, Digital Transformation, Enterprise Architecture.">
-    <meta name="keywords"
-        content="Technology Architect, OSS/BSS, Telecom, Enterprise Architecture, Digital Transformation, TOGAF, TM Forum">
-    <title>Edley Mathias | Senior Technology Architect</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description"
+    content="Edley Mathias - Technology Strategy Architect. 25+ years in Telecommunications, OSS/BSS, Digital Transformation, Enterprise Architecture.">
+<meta name="keywords"
+    content="Technology Architect, OSS/BSS, Telecom, Enterprise Architecture, Digital Transformation, TOGAF, TM Forum">
+<title>Edley Mathias | Senior Technology Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "site-teal": "#11CDAC",
+                    "soft-canvas": "#F9F9F9",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#0f3d5e",
+                    "on-secondary-fixed": "#002019",
+                    "blueprint-blue": "#0F3D5E",
+                    "on-primary-container": "#81a8ce",
+                    "walnut-warmth": "#A67C52",
+                    "on-secondary-fixed-variant": "#005142",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-container": "#5bf8d5",
+                    "tertiary-fixed-dim": "#eebd8e",
+                    "surface": "#fcf9f8",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed": "#5ffbd8",
+                    "inverse-surface": "#313030",
+                    "on-secondary-container": "#00705d",
+                    "inverse-primary": "#a3caf2",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "background": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#61401b",
+                    "surface-variant": "#e5e2e1",
+                    "primary": "#002741",
+                    "on-primary-fixed": "#001d33",
+                    "surface-container": "#f0eded",
+                    "outline": "#72777e",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-container": "#c99b6f",
+                    "primary-fixed": "#cee5ff",
+                    "charcoal": "#1A1A1A",
+                    "secondary-fixed-dim": "#37debc",
+                    "tertiary": "#391e00",
+                    "outline-variant": "#c2c7ce",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#42474e",
+                    "on-primary-fixed-variant": "#204a6b",
+                    "secondary": "#006b59",
+                    "surface-container-high": "#eae7e7",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#533310",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#3a6285",
+                    "primary-fixed-dim": "#a3caf2",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "gutter": "16px",
+                    "stack-sm": "8px",
+                    "section-gap": "80px",
+                    "stack-md": "24px",
+                    "stack-lg": "48px"
+                },
+                "fontFamily": {
+                    "body-md": ["Source Serif 4", "serif"],
+                    "label-lg": ["Metropolis", "sans-serif"],
+                    "headline-lg": ["Metropolis", "sans-serif"],
+                    "headline-md": ["Metropolis", "sans-serif"],
+                    "label-sm": ["Metropolis", "sans-serif"],
+                    "headline-lg-mobile": ["Metropolis", "sans-serif"],
+                    "display-lg": ["Metropolis", "sans-serif"],
+                    "body-lg": ["Source Serif 4", "serif"]
+                },
+                "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                }
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://fonts.cdnfonts.com/s/14883/Metropolis-Regular.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        font-weight: 700;
+        src: url('https://fonts.cdnfonts.com/s/14883/Metropolis-Bold.woff') format('woff');
+    }
+</style>
 </head>
+<body class="bg-soft-canvas text-on-surface font-body-md overflow-x-hidden">
 
-<body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Edley<span>Mathias</span></a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- Slide-out Mobile Nav Overlay -->
+<div id="navOverlay" class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+<div id="slideNav" class="fixed top-0 left-0 h-full w-72 bg-surface z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl">
+    <div class="flex justify-between items-center px-margin-mobile h-16 border-b border-outline-variant/30">
+        <h1 class="font-headline-md text-headline-md font-bold text-blueprint-blue uppercase tracking-widest">EDLEY MATHIAS</h1>
+        <button id="closeNavBtn" class="text-blueprint-blue hover:opacity-70 transition-opacity">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <ul class="flex flex-col py-stack-md">
+        <li><a href="#about" class="nav-link block px-margin-mobile py-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">About</a></li>
+        <li><a href="#services" class="nav-link block px-margin-mobile py-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Services</a></li>
+        <li><a href="#experience" class="nav-link block px-margin-mobile py-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Experience</a></li>
+        <li><a href="#certifications" class="nav-link block px-margin-mobile py-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Certifications</a></li>
+        <li><a href="#contact" class="nav-link block px-margin-mobile py-4 font-label-lg text-label-lg text-blueprint-blue font-bold hover:bg-surface-container transition-colors">Contact</a></li>
+    </ul>
+</div>
 
-    <section class="hero" id="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-        <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-title">Edley Mathias</h1>
-            <p class="hero-subtitle">Senior Technology Architect</p>
-            <p class="hero-description">
-                25+ years driving digital transformation across Telecommunications — specialising in
-                <strong>OSS/BSS</strong>,
-                Enterprise Middleware, Mediation Billing, and End-to-End Architecture.
-            </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Let's Talk</a>
-                <a href="#experience" class="btn btn-outline">View Experience</a>
-            </div>
-            <div class="hero-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Rotterdam, Netherlands</span>
-                <span><i class="fas fa-globe"></i> tolmai.uk</span>
-            </div>
-            <div class="hero-social">
-                <a href="https://github.com/edley" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/edleymathias/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </section>
+<!-- TopAppBar -->
+<header id="navbar" class="bg-surface/80 backdrop-blur-xl sticky top-0 z-30 border-b border-outline-variant/30">
+    <div class="flex justify-between items-center px-margin-mobile h-16 w-full max-w-7xl mx-auto">
+        <button id="menuToggle" class="text-primary hover:opacity-70 transition-opacity duration-300" aria-label="Toggle navigation">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <a href="#" class="font-headline-md text-headline-md font-bold text-blueprint-blue uppercase tracking-widest">EDLEY MATHIAS</a>
+        <button class="text-primary hover:opacity-70 transition-opacity duration-300" aria-label="Profile">
+            <span class="material-symbols-outlined">account_circle</span>
+        </button>
+    </div>
+</header>
 
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">About</span>
-                <h2 class="section-title">Architecting the Future of Telecom</h2>
-                <p class="section-subtitle">
-                    A trusted Enterprise Architect with a proven track record of leading large-scale
-                    transformation programmes for the world's leading telecom operators.
-                </p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        With over 25 years in the Telecommunications industry, I specialise in digital transformation,
-                        middleware, OSS/BSS, and end-to-end architecture. As a Techno-domain expert, I carry deep
-                        expertise in application architecture, design, and development across ERP, Mediation Billing,
-                        Enterprise Middleware, Microservices, and Order Management & Orchestration.
-                    </p>
-                    <p>
-                        I have led strategic programmes for tier-1 operators including <strong>Liberty Global</strong>,
-                        <strong>Orange Business</strong>, <strong>VodafoneZiggo</strong>, <strong>Proximus</strong>,
-                        <strong>Virgin Media Ireland</strong>, <strong>Telkom South Africa</strong>, and many more —
-                        delivering cost optimisation, architecture simplification, and technology modernisation at
-                        scale.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat"><span class="stat-number">25+</span><span class="stat-label">Years
-                                Experience</span></div>
-                        <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Tier-1
-                                Operators</span></div>
-                        <div class="stat"><span class="stat-number">4+</span><span class="stat-label">Cloud
-                                Certifications</span></div>
-                    </div>
+<main class="w-full">
+
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-gradient-to-br from-blueprint-blue via-blueprint-blue/80 to-charcoal"></div>
+        <div class="absolute inset-0 bg-blueprint-blue/40 backdrop-brightness-75"></div>
+    </div>
+    <div class="relative z-10 text-center px-margin-mobile">
+        <p class="text-white font-label-lg text-label-lg uppercase tracking-[0.3em] mb-stack-sm animate-fade-in">Senior Technology Architect</p>
+        <h2 class="text-white font-display-lg text-display-lg mb-stack-md leading-tight">Edley Mathias</h2>
+        <p class="text-white/90 font-body-lg text-body-lg max-w-2xl mx-auto mb-stack-lg italic">"25+ years driving digital transformation across Telecommunications specializing in OSS/BSS and E2E Architecture."</p>
+        <div class="flex flex-col sm:flex-row gap-stack-md justify-center">
+            <a class="bg-blueprint-blue text-white px-8 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-charcoal transition-colors duration-300 shadow-lg" href="#contact">Let's Talk</a>
+            <a class="border border-white text-white px-8 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-white/10 backdrop-blur-md transition-colors duration-300" href="#experience">View Experience</a>
+        </div>
+    </div>
+</section>
+
+<!-- Ratings Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="flex flex-col items-center mb-stack-lg text-center">
+            <span class="text-walnut-warmth font-label-lg text-label-lg uppercase mb-2">Trusted Industry Authority</span>
+            <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-blueprint-blue">Global Client Trust</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+            <div class="p-8 border border-outline-variant/30 bg-white hover:shadow-xl transition-shadow duration-500 flex flex-col gap-4">
+                <div class="flex text-walnut-warmth">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <div class="about-expertise">
-                    <h3>Core Expertise</h3>
-                    <div class="expertise-items">
-                        <div class="expertise-item">
-                            <i class="fas fa-sitemap"></i>
-                            <span>Enterprise & OSS/BSS Architecture</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-cloud"></i>
-                            <span>Cloud & Microservices Architecture</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Middleware & Integration</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-exchange-alt"></i>
-                            <span>Digital Transformation Strategy</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-database"></i>
-                            <span>Data Architecture & Mediation</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-robot"></i>
-                            <span>AI/ML Strategy & Implementation</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-layer-group"></i>
-                            <span>TM Forum / TOGAF Standards</span>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Order Management & Fulfilment</span>
-                        </div>
-                    </div>
+                <p class="font-body-md text-on-surface-variant italic">"Edley's architectural oversight on our multi-tenant platform was pivotal for our European roll-out. Unparalleled expertise."</p>
+                <p class="font-label-sm text-blueprint-blue uppercase">— CTO, Liberty Global</p>
+            </div>
+            <div class="p-8 border border-outline-variant/30 bg-white hover:shadow-xl transition-shadow duration-500 flex flex-col gap-4">
+                <div class="flex text-walnut-warmth">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
+                <p class="font-body-md text-on-surface-variant italic">"A true techno-domain expert. He simplified our complex legacy BSS ecosystem in record time."</p>
+                <p class="font-label-sm text-blueprint-blue uppercase">— Solutions Director, VodafoneZiggo</p>
+            </div>
+            <div class="p-8 border border-outline-variant/30 bg-white hover:shadow-xl transition-shadow duration-500 flex flex-col gap-4">
+                <div class="flex text-walnut-warmth">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-on-surface-variant italic">"Exceptional lead on IoT transformation. Bridged the gap between business needs and technical reality seamlessly."</p>
+                <p class="font-label-sm text-blueprint-blue uppercase">— Head of IoT, Orange Business</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section section-dark" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Services</span>
-                <h2 class="section-title">What I Deliver</h2>
-                <p class="section-subtitle">
-                    End-to-end architecture services that align technology with business outcomes.
-                </p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-sitemap"></i></div>
-                    <h3>Enterprise & OSS/BSS Architecture</h3>
-                    <p>Comprehensive assessment and design of OSS/BSS ecosystems spanning Wholesale, B2B, and B2C
-                        domains. Architecture modernisation, platform consolidation, and technical debt reduction.</p>
+<!-- About Section -->
+<section class="py-section-gap bg-soft-canvas overflow-hidden" id="about">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] bg-surface-container rounded-lg flex items-center justify-center">
+                    <span class="material-symbols-outlined text-8xl text-blueprint-blue/20">person</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                    <h3>Digital Transformation</h3>
-                    <p>End-to-end digital transformation programmes — from business process assessment to technology
-                        stack modernisation, microservices adoption, and cloud migration.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>IoT & Next-Gen Architecture</h3>
-                    <p>End-to-end architecture for IoT platforms including product modelling, BSS integration, OSS
-                        mediation, billing, and mediation ecosystems.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Integration Architecture</h3>
-                    <p>Enterprise middleware strategy, API-led connectivity, event-driven architectures, and zero-touch
-                        provisioning flows across complex multi-vendor environments.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI/ML & Intelligent Automation</h3>
-                    <p>Architecting AI/ML capabilities including voice assistants, intelligent troubleshooting, Visual
-                        IVR, and predictive analytics for customer experience platforms.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Technology Advisory & Assurance</h3>
-                    <p>Strategic IT demand management, technology stack evaluation, vendor selection, and roadmap
-                        definition with a focus on cost optimisation and scalability.</p>
+                <div class="absolute -bottom-10 -right-10 hidden md:block bg-blueprint-blue p-8 shadow-2xl">
+                    <p class="text-white font-display-lg text-display-lg">25+</p>
+                    <p class="text-on-primary-container font-label-lg text-label-lg uppercase tracking-widest">Years Experience</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Experience</span>
-                <h2 class="section-title">Trusted by Global Telecom Leaders</h2>
-                <p class="section-subtitle">
-                    Delivering large-scale transformation for tier-1 operators across Europe, Middle East, and Africa.
-                </p>
-            </div>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Liberty Global</h3>
-                            <span class="timeline-role">End-to-End Enterprise Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Netherlands</span>
-                        </div>
-                        <p>E2E architect for the multi-tenant OneConnect Connectivity Platform. Leading device
-                            management capabilities, AI/ML integration, and architecting <strong>ConnectAssist</strong>
-                            — a voice assistant that captures customer requests and executes actions. Previously led the
-                            rationalisation of oneMediation, OneERP, OneOSS, OneBSS and architected a corporate payment
-                            hub with zero-touch provisioning.</p>
+            <div class="flex flex-col gap-stack-md">
+                <h3 class="font-headline-lg text-headline-lg text-blueprint-blue">Architecting the Future of Telecom</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">A trusted Enterprise Architect with a proven track record of leading large-scale transformation programmes for the world's leading tier-1 telecom operators.</p>
+                <p class="font-body-md text-body-md text-on-surface">With over 25 years in the Telecommunications industry, I specialise in digital transformation, middleware, OSS/BSS, and end-to-end architecture. As a Techno-domain expert, I deliver cost optimisation, architecture simplification, and technology modernisation at scale.</p>
+                <div class="grid grid-cols-2 gap-stack-md mt-stack-md">
+                    <div class="border-l-2 border-walnut-warmth pl-4">
+                        <p class="font-headline-md text-headline-md text-blueprint-blue">10+</p>
+                        <p class="font-label-sm text-label-sm uppercase">Tier-1 Operators</p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Drei Austria</h3>
-                            <span class="timeline-role">End-to-End Lead Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Austria</span>
-                        </div>
-                        <p>Leading a comprehensive end-to-end business, process, and technical assessment of the OSS/BSS
-                            ecosystem spanning Wholesale, B2B, and B2C domains. Defining an optimisation model through
-                            process streamlining, platform consolidation, and architecture simplification.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Orange Business</h3>
-                            <span class="timeline-role">End-to-End Lead Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> France</span>
-                        </div>
-                        <p>E2E Lead Architect for the IoT Next Generation architecture stream. Responsible for product
-                            modelling, BSS integration, OSS connectivity, billing, and mediation architecture.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Virgin Media Ireland</h3>
-                            <span class="timeline-role">End-to-End Retail Solution Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Ireland</span>
-                        </div>
-                        <p>Leading the major B2C transformation programme. Onboarding Offnet vendors for Fixed and
-                            Mobile services. Architecting new ordering processes and solutions for Offnet orders and
-                            provisioning.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Ooredoo Oman</h3>
-                            <span class="timeline-role">End-to-End Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Oman</span>
-                        </div>
-                        <p>Led the assessment of OSS/BSS systems across mobile and fixed domains. Delivered
-                            architectural building blocks and modernisation recommendations incorporating IMS and AMS
-                            frameworks within a managed services model.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Proximus</h3>
-                            <span class="timeline-role">Senior Enterprise Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Belgium</span>
-                        </div>
-                        <p>E2E Senior Enterprise Architect for a major transformation programme. Focus on fixed retail
-                            and mobile customer end-to-end provisioning, product modelling, and fulfilment.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>UPC Switzerland</h3>
-                            <span class="timeline-role">E2E Lead Digital Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Switzerland</span>
-                        </div>
-                        <p>Lead Digital Architect for B2B digital transformation. Key initiatives: Enterprise Content
-                            System, Customer Engagement Platform, Converged B2B/B2C OneStack Strategy, self-help digital
-                            troubleshooting, Visual IVR, and Microservices strategy.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Telkom South Africa</h3>
-                            <span class="timeline-role">Senior Enterprise Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> South Africa</span>
-                        </div>
-                        <p>Senior Enterprise Architect for retail and wholesale. Creating and evolving Enterprise
-                            Architecture meta-models and standards using TOGAF/TM Forum. Architected end-to-end mobile
-                            solutions for prepaid and postpaid markets.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>France Telecom (Sofrecom)</h3>
-                            <span class="timeline-role">Senior Business/Functional Architect</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> France</span>
-                        </div>
-                        <p>Leading integration projects across EPC product modelling, Fulfilment, Assurance, Payment
-                            Solutions, Fraud & Credit Vetting, B2B, B2C, EBU, and Wholesale. Established the EA Centre
-                            of Excellence.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Andersen Consulting</h3>
-                            <span class="timeline-role">Lead Consultant</span>
-                            <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Mauritius</span>
-                        </div>
-                        <p>Lead consultant in telecoms and media across the African region, focusing on integration,
-                            digitalisation, and customer experience.</p>
+                    <div class="border-l-2 border-walnut-warmth pl-4">
+                        <p class="font-headline-md text-headline-md text-blueprint-blue">4+</p>
+                        <p class="font-label-sm text-label-sm uppercase">Cloud Certifications</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section section-dark" id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Credentials</span>
-                <h2 class="section-title">Certifications & Skills</h2>
-                <p class="section-subtitle">
-                    Industry-recognised certifications and deep technical expertise across the technology stack.
-                </p>
+<!-- Core Expertise Bento Grid -->
+<section class="py-section-gap bg-surface">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="mb-stack-lg">
+            <span class="text-walnut-warmth font-label-lg text-label-lg uppercase tracking-widest">Specializations</span>
+            <h3 class="font-headline-lg text-headline-lg text-blueprint-blue mt-2">Core Expertise</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
+            <div class="md:col-span-2 md:row-span-2 bg-blueprint-blue p-8 flex flex-col justify-end text-white hover:scale-[1.02] transition-transform duration-300">
+                <span class="material-symbols-outlined text-4xl mb-stack-md">architecture</span>
+                <h4 class="font-headline-md text-headline-md mb-2">Enterprise &amp; OSS/BSS Architecture</h4>
+                <p class="text-white/70 font-body-md">Simplifying complex telecom ecosystems with strategic end-to-end oversight.</p>
             </div>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
-                    <h3>AWS Certified Solutions Architect</h3>
-                    <p>Amazon Web Services</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-salesforce"></i></div>
-                    <h3>Salesforce Certified Architect</h3>
-                    <p>Salesforce</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
-                    <h3>GenAI Certification</h3>
-                    <p>NVIDIA / Lex</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>AI Certification</h3>
-                    <p>EITCI Institute</p>
-                </div>
+            <div class="bg-white border border-outline-variant/30 p-8 flex flex-col justify-center items-center text-center hover:bg-soft-canvas transition-colors">
+                <span class="material-symbols-outlined text-blueprint-blue text-3xl mb-stack-sm">cloud</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">Cloud &amp; Microservices</h4>
             </div>
-            <div class="skills-section">
-                <h3>Technical Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Enterprise Architecture</div>
-                    <div class="skill-tag">OSS/BSS</div>
-                    <div class="skill-tag">TOGAF</div>
-                    <div class="skill-tag">TM Forum</div>
-                    <div class="skill-tag">Microservices</div>
-                    <div class="skill-tag">Cloud Architecture</div>
-                    <div class="skill-tag">Middleware</div>
-                    <div class="skill-tag">Integration</div>
-                    <div class="skill-tag">Order Management</div>
-                    <div class="skill-tag">Mediation Billing</div>
-                    <div class="skill-tag">API Design</div>
-                    <div class="skill-tag">Data Architecture</div>
-                    <div class="skill-tag">AI/ML</div>
-                    <div class="skill-tag">IoT Architecture</div>
-                    <div class="skill-tag">ERP Integration</div>
-                    <div class="skill-tag">Product Modelling</div>
-                    <div class="skill-tag">Event-Driven Architecture</div>
-                    <div class="skill-tag">Zero-Touch Provisioning</div>
-                </div>
+            <div class="bg-white border border-outline-variant/30 p-8 flex flex-col justify-center items-center text-center hover:bg-soft-canvas transition-colors">
+                <span class="material-symbols-outlined text-blueprint-blue text-3xl mb-stack-sm">schema</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">Middleware &amp; Integration</h4>
             </div>
-            <div class="languages-section">
-                <h3>Languages</h3>
-                <div class="languages-grid">
-                    <div class="language-item">
-                        <span class="language-name">English</span>
-                        <span class="language-level">Native / Bilingual</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-name">French</span>
-                        <span class="language-level">Professional Working</span>
-                    </div>
+            <div class="md:col-span-2 bg-walnut-warmth p-8 flex flex-col justify-center text-white hover:scale-[1.02] transition-transform duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-3xl">psychology</span>
+                    <h4 class="font-headline-md text-headline-md">AI/ML Strategy</h4>
                 </div>
+                <p class="text-white/80 mt-2">Architecting intelligent automation and voice assistant ecosystems.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Contact</span>
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">
-                    Have a project or transformation programme in mind? Let's discuss how I can help architect your next
-                    success.
-                </p>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface-container-low" id="services">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="flex flex-col items-center text-center mb-stack-lg">
+            <h3 class="font-headline-lg text-headline-lg text-blueprint-blue">What I Deliver</h3>
+            <p class="text-on-surface-variant max-w-xl mt-4">End-to-end architecture services that align technology with strategic business outcomes.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-md">
+            <div class="group bg-white p-10 border border-outline-variant/30 flex flex-col gap-stack-sm hover:border-blueprint-blue transition-all duration-300 relative overflow-hidden">
+                <div class="w-1 h-0 bg-blueprint-blue absolute left-0 top-0 group-hover:h-full transition-all duration-500"></div>
+                <span class="text-blueprint-blue font-label-sm uppercase tracking-tighter opacity-50">01 / Service</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue">Digital Transformation</h4>
+                <p class="font-body-md text-on-surface-variant">Business process assessment to technology stack modernisation, microservices adoption, and cloud migration.</p>
             </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:edleymathias@tolmai.uk">edleymathias@tolmai.uk</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+31611000862">+31 6 11000862</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <span>Rotterdam, Netherlands</span>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-globe"></i>
-                        <div>
-                            <h4>Web</h4>
-                            <a href="https://tolmai.uk" target="_blank">tolmai.uk</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/edley" target="_blank">github.com/edley</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/edleymathias/" target="_blank">linkedin.com/in/edleymathias</a>
-                        </div>
-                    </div>
-                    <div class="contact-cta-text">
-                        <p>I typically respond within 24 hours. For urgent matters, please reach out via phone or direct
-                            email.</p>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+31 6 ...">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject <span class="required">*</span></label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Select a topic</option>
-                            <option value="Enterprise Architecture">Enterprise Architecture</option>
-                            <option value="OSS/BSS Transformation">OSS/BSS Transformation</option>
-                            <option value="Digital Strategy">Digital Strategy</option>
-                            <option value="Cloud Architecture">Cloud Architecture</option>
-                            <option value="Integration Architecture">Integration Architecture</option>
-                            <option value="Consulting">Consulting</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-                            required></textarea>
-                    </div>
-                    <div class="form-status" id="formStatus"></div>
-                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-                        <span id="submitText">Send Message</span>
-                        <span id="submitSpinner" class="spinner" style="display:none;"><i
-                                class="fas fa-circle-notch fa-spin"></i></span>
-                    </button>
-                </form>
+            <div class="group bg-white p-10 border border-outline-variant/30 flex flex-col gap-stack-sm hover:border-blueprint-blue transition-all duration-300 relative overflow-hidden">
+                <div class="w-1 h-0 bg-blueprint-blue absolute left-0 top-0 group-hover:h-full transition-all duration-500"></div>
+                <span class="text-blueprint-blue font-label-sm uppercase tracking-tighter opacity-50">02 / Service</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue">IoT &amp; Next-Gen</h4>
+                <p class="font-body-md text-on-surface-variant">End-to-end architecture for IoT platforms including product modelling, BSS integration, and mediation ecosystems.</p>
+            </div>
+            <div class="group bg-white p-10 border border-outline-variant/30 flex flex-col gap-stack-sm hover:border-blueprint-blue transition-all duration-300 relative overflow-hidden">
+                <div class="w-1 h-0 bg-blueprint-blue absolute left-0 top-0 group-hover:h-full transition-all duration-500"></div>
+                <span class="text-blueprint-blue font-label-sm uppercase tracking-tighter opacity-50">03 / Service</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue">Technology Advisory</h4>
+                <p class="font-body-md text-on-surface-variant">IT demand management, vendor selection, and roadmap definition with focus on cost optimisation and scalability.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Edley Mathias</h3>
-                    <p>Senior Technology Architect</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#certifications">Certifications</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/edley" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/edleymathias/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2026 Edley Mathias. All rights reserved.</p>
-                    <p>Domain: tolmai.uk</p>
-                </div>
+<!-- Experience Timeline -->
+<section class="py-section-gap bg-surface" id="experience">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="flex flex-col items-center mb-stack-lg">
+            <h3 class="font-headline-lg text-headline-lg text-blueprint-blue">Global Leadership</h3>
+        </div>
+        <div class="relative border-l border-outline-variant/50 ml-4 md:ml-margin-mobile pl-10 space-y-stack-lg">
+            <div class="relative">
+                <div class="absolute -left-[51px] top-1 w-5 h-5 rounded-full bg-blueprint-blue border-4 border-surface"></div>
+                <span class="font-label-sm text-walnut-warmth uppercase">Netherlands — Liberty Global</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue mt-1">End-to-End Enterprise Architect</h4>
+                <p class="font-body-md text-on-surface-variant mt-2">Architecting multi-tenant OneConnect platform. Rationalisation of oneMediation, OneERP, and corporate payment hubs with zero-touch provisioning.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute -left-[51px] top-1 w-5 h-5 rounded-full bg-outline border-4 border-surface"></div>
+                <span class="font-label-sm text-walnut-warmth uppercase">Austria — Drei Austria</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue mt-1">Lead Architect</h4>
+                <p class="font-body-md text-on-surface-variant mt-2">Leading comprehensive OSS/BSS ecosystem assessment across Wholesale, B2B, and B2C domains for platform consolidation.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute -left-[51px] top-1 w-5 h-5 rounded-full bg-outline border-4 border-surface"></div>
+                <span class="font-label-sm text-walnut-warmth uppercase">France — Orange Business</span>
+                <h4 class="font-headline-md text-headline-md text-blueprint-blue mt-1">E2E Lead Architect IoT</h4>
+                <p class="font-body-md text-on-surface-variant mt-2">Responsible for product modelling and BSS/OSS connectivity for IoT Next Generation architecture streams.</p>
             </div>
         </div>
-    </footer>
+        <div class="mt-stack-lg text-center">
+            <button class="font-label-lg text-label-lg text-blueprint-blue uppercase tracking-widest border-b border-blueprint-blue pb-1 hover:text-walnut-warmth hover:border-walnut-warmth transition-all">View Full Portfolio</button>
+        </div>
+    </div>
+</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script src="js/supabase.js"></script>
-    <script src="js/main.js"></script>
-</body>
+<!-- Certifications Section -->
+<section class="py-section-gap bg-surface-container-low" id="certifications">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="flex flex-col items-center text-center mb-stack-lg">
+            <h3 class="font-headline-lg text-headline-lg text-blueprint-blue">Certifications &amp; Skills</h3>
+            <p class="text-on-surface-variant max-w-xl mt-4">Industry-recognised certifications and deep technical expertise across the technology stack.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+            <div class="bg-white p-6 text-center border border-outline-variant/30 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-blueprint-blue mb-stack-sm">cloud</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">AWS Certified</h4>
+                <p class="font-body-md text-on-surface-variant text-sm">Solutions Architect</p>
+            </div>
+            <div class="bg-white p-6 text-center border border-outline-variant/30 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-blueprint-blue mb-stack-sm">layers</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">Salesforce</h4>
+                <p class="font-body-md text-on-surface-variant text-sm">Certified Architect</p>
+            </div>
+            <div class="bg-white p-6 text-center border border-outline-variant/30 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-blueprint-blue mb-stack-sm">psychology</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">GenAI</h4>
+                <p class="font-body-md text-on-surface-variant text-sm">NVIDIA / Lex</p>
+            </div>
+            <div class="bg-white p-6 text-center border border-outline-variant/30 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-blueprint-blue mb-stack-sm">verified</span>
+                <h4 class="font-label-lg text-label-lg text-blueprint-blue uppercase">AI Certification</h4>
+                <p class="font-body-md text-on-surface-variant text-sm">EITCI Institute</p>
+            </div>
+        </div>
+        <div class="mt-stack-lg flex flex-wrap justify-center gap-3">
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Enterprise Architecture</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">OSS/BSS</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">TOGAF</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">TM Forum</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Microservices</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Cloud Architecture</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Middleware</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Integration</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">API Design</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">AI/ML</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">IoT Architecture</span>
+            <span class="px-4 py-2 bg-surface border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant">Zero-Touch Provisioning</span>
+        </div>
+    </div>
+</section>
 
-</html>
+<!-- Contact Section -->
+<section class="py-section-gap bg-charcoal text-white" id="contact">
+    <div class="max-w-7xl mx-auto px-margin-mobile">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg">
+            <div>
+                <h3 class="font-display-lg text-display-lg mb-stack-md">Let's Work Together</h3>
+                <p class="text-white/70 font-body-lg text-body-lg mb-stack-lg">Have a project or transformation programme in mind? Let's discuss how I can help architect your next success.</p>
+                <ul class="space-y-stack-md">
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-walnut-warmth">mail</span>
+                        <span class="font-body-md">edleymathias@tolmai.uk</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-walnut-warmth">call</span>
+                        <span class="font-body-md">+31 6 11000862</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-walnut-warmth">location_on</span>
+                        <span class="font-body-md">Rotterdam, Netherlands</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-walnut-warmth">language</span>
+                        <span class="font-body-md">tolmai.uk</span>
+                    </li>
+                </ul>
+            </div>
+            <form class="flex flex-col gap-stack-md bg-white/5 p-8 rounded-lg backdrop-blur-sm border border-white/10" id="contactForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+                    <input class="bg-transparent border-b border-white/20 focus:border-walnut-warmth transition-colors py-2 outline-none text-white font-body-md placeholder:text-white/40" placeholder="Full Name *" type="text" id="name" name="name" required/>
+                    <input class="bg-transparent border-b border-white/20 focus:border-walnut-warmth transition-colors py-2 outline-none text-white font-body-md placeholder:text-white/40" placeholder="Email *" type="email" id="email" name="email" required/>
+                </div>
+                <input class="bg-transparent border-b border-white/20 focus:border-walnut-warmth transition-colors py-2 outline-none text-white font-body-md placeholder:text-white/40" placeholder="Phone" type="tel" id="phone" name="phone"/>
+                <select class="bg-transparent border-b border-white/20 focus:border-walnut-warmth transition-colors py-2 outline-none text-white font-body-md" id="subject" name="subject" required>
+                    <option value="" disabled selected class="text-on-surface-variant">Select a topic *</option>
+                    <option value="Enterprise Architecture" class="text-on-surface-variant">Enterprise Architecture</option>
+                    <option value="OSS/BSS Transformation" class="text-on-surface-variant">OSS/BSS Transformation</option>
+                    <option value="Digital Strategy" class="text-on-surface-variant">Digital Strategy</option>
+                    <option value="Cloud Architecture" class="text-on-surface-variant">Cloud Architecture</option>
+                    <option value="Integration Architecture" class="text-on-surface-variant">Integration Architecture</option>
+                    <option value="Consulting" class="text-on-surface-variant">Consulting</option>
+                    <option value="Other" class="text-on-surface-variant">Other</option>
+                </select>
+                <textarea class="bg-transparent border-b border-white/20 focus:border-walnut-warmth transition-colors py-2 outline-none text-white font-body-md placeholder:text-white/40" placeholder="Message *" id="message" name="message" rows="4" required></textarea>
+                <div id="formStatus" class="font-body-md text-sm"></div>
+                <button type="submit" class="bg-blueprint-blue text-white py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-walnut-warmth transition-colors duration-300 mt-4" id="submitBtn">
+                    <span id="submitText">Send Message</span>
+                    <span id="submitSpinner" class="spinner" style="display:none;"><span class="material-symbols-outlined animate-spin text-lg">refresh</span></span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface py-stack-lg border-t border-outline-variant/20 mb-20 md:mb-0">
+    <div class="max-w-7xl mx-auto px-margin-mobile flex flex-col md:flex-row justify-between items-center gap-stack-md">
+        <div class="flex flex-col items-center md:items-start">
+            <span class="font-headline-md text-headline-md font-bold text-blueprint-blue uppercase">EDLEY MATHIAS</span>
+            <p class="text-on-surface-variant font-label-sm text-label-sm uppercase mt-1">Senior Technology Architect</p>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-blueprint-blue hover:text-walnut-warmth transition-colors" href="https://github.com/edley" target="_blank" aria-label="GitHub"><span class="material-symbols-outlined">link</span></a>
+            <a class="text-blueprint-blue hover:text-walnut-warmth transition-colors" href="https://www.linkedin.com/in/edleymathias/" target="_blank" aria-label="LinkedIn"><span class="material-symbols-outlined">person</span></a>
+        </div>
+        <p class="text-on-surface-variant font-label-sm text-label-sm">&copy; 2026 Edley Mathias. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-2 bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 z-40 rounded-t-xl shadow-lg">
+    <a class="flex flex-col items-center justify-center text-blueprint-blue bg-surface-container-low rounded-full px-4 py-1 transition-transform duration-150" href="#">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-tighter">Home</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline hover:text-blueprint-blue transition-colors" href="#services">
+        <span class="material-symbols-outlined">architecture</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-tighter">Services</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline hover:text-blueprint-blue transition-colors" href="#experience">
+        <span class="material-symbols-outlined">business_center</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-tighter">Portfolio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline hover:text-blueprint-blue transition-colors" href="#contact">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-tighter">Contact</span>
+    </a>
+</nav>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/main.js"></script>
+</body></html>
